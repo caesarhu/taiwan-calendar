@@ -49,10 +49,10 @@
        str->int
        (+ 1911)))
 
-(s/defn cell-colorcolor :- s/Str
+(s/defn cell-colorcolor :- (s/maybe s/Str)
   [cell :- Cell]
   (when-let [color (.getFillForegroundColorColor (.getCellStyle cell))]
-    (if (instance? xlsx-color-class)
+    (if (instance? xlsx-color-class color)
       (.getARGBHex color)
       (.getHexString color))))
 
