@@ -64,6 +64,7 @@
   (sp/select [sp/ALL #(and (< 2 (count %)) (:holiday? (first %)))] (partition-by :holiday? calendar)))
 
 (s/defn year-calendar :- {:calendar [DateMap]
+                          :year s/Int
                           :make-up [DateMap]
                           :long-weekend [[DateMap]]}
   ([file :- s/Str
@@ -75,6 +76,9 @@
                 cal2 (if labor?
                        (set-holiday cal lday)
                        cal)]
-     (hash-map :calendar cal2 :make-up (find-make-up cal2) :long-weekend (find-long-weekend cal2))))
+     (hash-map :calendar cal2
+               :year year
+               :make-up (find-make-up cal2)
+               :long-weekend (find-long-weekend cal2))))
   ([file :- s/Str]
    (year-calendar file true)))
