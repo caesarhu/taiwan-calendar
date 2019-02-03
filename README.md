@@ -1,10 +1,19 @@
 # taiwan-calendar
 
-A Clojure library designed to ... well, that part is up to you.
+A Clojure library --> 匯入台灣人事行政總處行事曆 Excel檔，讀取工作日與假日。
 
 ## Usage
 
-FIXME
+(year-calendar file)         ;; file -> Excel file path
+(year-calendar file labor?)  ;; labor? -> 要不要加入勞動節為假日，預設為true
+
+輸出結果：
+{:year int                                年度
+ :calendar {:date java-time.local-date    日期
+            :holiday? bool}               是否假日?
+ :make-up                                 補上班日
+ :long-weekend                            連續假日
+}
 
 ## License
 
