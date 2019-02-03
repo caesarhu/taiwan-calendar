@@ -9,8 +9,7 @@ A Clojure library --> 匯入台灣人事行政總處行事曆 Excel檔，讀取�
 
 輸出結果：  
 {:year int                                年度  
- :calendar {:date java-time.local-date    日期  
-            :holiday? bool}               是否假日?  
+ :calendar {:date java-time.local-date :holiday? bool}
  :make-up                                 補上班日  
  :long-weekend                            連續假日  
 }
