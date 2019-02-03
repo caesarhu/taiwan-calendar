@@ -7,6 +7,8 @@
                  [prismatic/schema "1.1.10"]
                  [clojure.java-time "0.3.2"]
                  [dk.ative/docjure "1.13.0"]
+                 [metosin/potpuri "0.5.2"]
                  [com.rpl/specter "1.1.2"]]
   :repl-options {:init-ns taiwan-calendar.core}
+  :resource-paths ["resources"]
   :profiles {:dev {:source-paths ["env/dev/clj"]}})
