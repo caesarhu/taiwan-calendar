@@ -14,10 +14,10 @@ A Clojure library --> 匯入台灣人事行政總處行事曆 Excel檔，讀取�
 
 ```clojure
 date-map {:date java-time.local-date	;;日期
-          :holiday? bool}				;;是否假日?
+          :holiday? bool}               ;;是否假日?
 
 {:year int                              ;;年度
- :calendar [date-map ...]    			;;年度所有日期
+ :calendar [date-map ...]               ;;年度所有日期
  :make-up [date-map ...]                ;;補上班日
  :long-weekend [[date-map ...]...]      ;;連續假日
 }
