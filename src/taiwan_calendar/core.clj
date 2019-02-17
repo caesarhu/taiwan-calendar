@@ -6,13 +6,7 @@
             [schema.core :as s]
             [dk.ative.docjure.spreadsheet :as ss]))
 
-(s/set-fn-validation! true)
-
-(def calendar-2019-file "resources/108年辦公日曆表.xls")
-(def calendar-2018-file-1 "resources/107年辦公日曆表.xls")
-(def calendar-2018-file-2 "resources/107年辦公日曆表.xlsx")
-(def sheet-2019 (read-sheet calendar-2019-file "Sheet1"))
-(def sheet-2018 (read-sheet calendar-2018-file-2 "Sheet1"))
+;;(s/set-fn-validation! true)
 
 (s/defschema DateMap
   "A schema for a date-map data type"
